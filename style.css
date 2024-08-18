@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+*::selection{
+    color: #52c11e;
+    background-color: white;
+}
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body::-webkit-scrollbar{
+    display: block;
+    width: 8px;
+    background: linear-gradient(#52c11e,blue);
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(blue,#52c11e);
+    border-radius: 8px;
+}
+
+/* nav bar is fix frist page  */
+nav {
+    height: 145px;
+    width: 100%;
+    /* background-color: red; */
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 0 150px;
+    z-index: 99;
+    /* position: relative; */
+}
+
+nav img {
+    height: 70px;
+}
+
+nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* cursor css code  */
+#cursor {
+    height: 25px;
+    width: 25px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+}
+
+#cursor-b {
+    width: 400px;
+    height: 400px;
+    background-color: #95c11e2b;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+
+/* video fix in fram  */
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+/* starting as main contain part  */
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#main #page1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* text-transform: ; */
+    position: relative;
+    text-align: center;
+}
+
+#main #page1 h1 {
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+    z-index: 99;
+}
+
+#main #page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    left: -6px;
+    top: -6px;
+    z-index: -1;
+    -webkit-text-stroke: 2px #52c11e;
+}
+
+#main #page1 h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 10px 0 20px;
+    z-index: 99;
+
+}
+
+#main #page1 p {
+    width: 35%;
+    font-size: 22px;
+    font-weight: 400;
+    z-index: 99;
+
+}
+
+/* page 2 css code  */
+#main #page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+/* page 2 in scroller part  */
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller h4:hover {
+    color: #52c11e;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-left: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 2px #95C11E;
+
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* about us part  */
+#about-us {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+}
+
+#about-us img {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-us .about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us .about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    z-index: 999;
+
+}
+
+#about-us .about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 999;
+
+
+}
+
+/* Cards css code  */
+.card-container {
+    /* background-color: red; */
+    height: 60vh;
+    /* width: 100%; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    gap: 70px;
+}
+
+.card-container .card:hover {
+    transform: rotate3d(0, 1, 1, 15deg);
+}
+
+.card-container .card {
+    width: 24%;
+    height: 80%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+
+}
+
+.card-container .card .overlap {
+    width: 100%;
+    height: 100%;
+    background-color: #96c11ee8;
+    padding: 50px;
+    opacity: 0;
+    transition: all ease-in-out 0.6s;
+
+}
+
+.card-container .card .overlap:hover {
+    opacity: 1;
+}
+
+.card-container .card .overlap p {
+    color: black;
+}
+
+.card-container .card .overlap h4 {
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+    white-space: nowrap;
+    padding-bottom: 20px;
+
+}
+
+.card-container #card1 {
+    background-image: url("Assests/home-toptracer-1024x682.avif");
+}
+
+.card-container #card2 {
+    background-image: url("Assests/hero-4-1024x1024.avif");
+}
+
+.card-container #card3 {
+    background-image: url("Assests/home-lessons-1024x682.avif");
+}
+
+/* green part div  */
+.green-div {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+
+.green-div h4 {
+    font-size: 27px;
+    font-weight: bold;
+    width: 40%;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    z-index: 99;
+
+    /* display: flex; */
+    /* font-family: gilroy; */
+}
+
+.green-div img {
+    width: 14%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* page3 c part code  */
+#page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3 img {
+    height: 60px;
+    position: absolute;
+}
+
+#page3 .lquote {
+    top: 20%;
+    left: 14%;
+}
+
+#page3 .rquote {
+    bottom: 25%;
+    right: 15%;
+}
+
+#page3 p {
+    font-size: 35px;
+    font-weight: 800;
+    width: 60%;
+    text-align: center;
+    line-height: 45px;
+    z-index: 99;
+
+}
+
+/* page4 part  */
+#page4 {
+    height: 30vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 70px;
+}
+
+#page4 .box {
+    height: 70%;
+    width: 26%;
+    /* background-color: blue; */
+    position: relative;
+    gap: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 9;
+}
+#page4 h2{
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-weight: 900;
+    font-size: 40px;
+    background-color: #95C11E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+#page4 .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in-out 0.6s;
+
+}
+.box:hover img{
+    transition: all ease-in-out 0.6s;
+    scale: 1.1;
+}
+#page4 .box:hover h2{
+    color: white;
+    background-color: transparent;
+
+}
+
+/* page4 bcg h1 text  */
+#page4 h1{
+    position: absolute;
+    font-size: 95px;
+    font-family: gilroy;
+    top: -15%;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+/* footer css code  */
+footer{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#119f3a,#ace022);
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-evenly;
+    padding-left: 100px;
+    padding-right: 20%;
+}
+footer .mainimg{
+    height: 100%;
+    left: 0;
+    z-index: 0;
+    position: absolute;
+}
+
+
+footer .f1 .fimg{
+    /* height: 100%; */
+    width: 130px;
+    /* position: absolute; */
+}
+footer h3{
+    color: #000;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 40px;
+    /* z-index: 99; */
+    z-index: 999;
+
+
+}
+footer h4{
+    color: #000;
+    z-index: 999;
+
+}

@@ -12,8 +12,6 @@ The main focus of this project is to provide:
 
 This project serves as a demonstration of **front-end development skills**, **animation expertise**, and **performance optimization** using modern JavaScript libraries. 🚀  
 
-A **responsive and interactive** clone of the Sidcup Golf Family website, built using modern web technologies with smooth animations.
-
 ## 🚀 Features
 
 - **Fully Responsive** – Works seamlessly on all devices.

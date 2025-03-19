@@ -1,5 +1,9 @@
 # Sidcup Golf Family Clone
 
+## Video
+
+https://github.com/user-attachments/assets/1b8f6b9c-9b44-49f8-a274-ef8ed9614d27
+
 ## About  
 
 The **Sidcup Golf Family Clone** is a fully responsive and interactive web project that replicates the official Sidcup Golf Family website. Built using **HTML, CSS, and JavaScript**, this project features **smooth animations** powered by **GSAP and ScrollTrigger**, creating a dynamic and engaging user experience.  
